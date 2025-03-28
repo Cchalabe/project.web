@@ -1,0 +1,27 @@
+skeleton-project/
+├── public/
+│ └── assets/
+│ └── videos/
+│ ├── video1.mp4
+│ └── video1.bin
+├── src/ (or src_app/ for React Native)
+│ ├── components/
+│ │ ├── VideoPlayer.tsx (or VideoPlayer.js/jsx)
+│ │ ├── SkeletonOverlay.tsx (or SkeletonOverlay.js/jsx)
+│ │ └── constants.ts
+│ ├── App.tsx (or App.js/jsx)
+│ ├── utils/
+│ │ └── skeletonUtils.ts (or skeletonUtils.js)
+│ ├── styles.css (if necessary)
+│ └── index.tsx (or index.js/jsx)
+├── package.json
+├── tsconfig.json (if you use TypeScript)
+├── .eslintrc.json
+├── .prettierrc.json
+└── README.md
+
+
+/**
+ * Well, the first thing I did was organize the structure of the project,
+  our skeleton, into a series of concrete steps.
+ */

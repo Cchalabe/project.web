@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="C:\Users\samsung\Downloads\issue\tumeke-task-carolina-b828fcbd82db73e0906cc33cccb87e8551043c07\public\assets\videos\video1.mp4"
+    />
+    <title>Video Skeleton App</title>
+  </head>
+  <body>
+    <script>
+  <div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <header className="App-header">Video Skeleton App</header>
+  </div>
+    
+videoUri='/assets/videos/video1.mp4' 
+jointsUri='/assets/videos/video1.bin'
+</script>
+  </body>
+</html>
+
+/**
+ * @format
+ */
+// src/components/VideoPlayer.tsx
+
+import React, { useRef, useEffect } from 'react';
+
+interface VideoPlayerProps {
+  source: string;
+  onReady?: () => void; // onReady es opcional
+}
+
+const VideoPlayer: React.FC<VideoPlayerProps> = ({ source, onReady }) => {
+  const videoRef = useRef<HTMLVideoElement>();
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.onloadeddata = () => {
+        if (onReady) {
+          onReady();
+        }
+      };
+    }
+  }, [onReady]);
+
+  return (
+    <video
+      ref={videoRef}
+      src={source}
+      controls
+      style={{ width: '100%', maxWidth: '640px' }}
+    />
+  );
+};
+
+export default VideoPlayer;

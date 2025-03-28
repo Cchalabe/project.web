@@ -1,0 +1,27 @@
+body {
+  background-color: #FFF;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App-header {
+  display: flex;
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.App-video-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 640px;
+  height: 700px;
+  background-color: #000;
+}
